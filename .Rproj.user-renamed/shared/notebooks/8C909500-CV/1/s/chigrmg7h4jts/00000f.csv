@@ -1,0 +1,6 @@
+"0","tribble("
+"0","  ~ what, ~ when, ~ with, ~ where, ~why,"
+"0","  ""Graduate Student Research Grant"", ""2019"", """", """", """","
+"0","  ""Graduate Student Research Grant"", ""2021"", """", """", """""
+"0",") %>%"
+"0","  brief_entries()"

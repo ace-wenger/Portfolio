@@ -1,0 +1,157 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[circle,noedge,left]{books}
+\name{Aaron C.}{Wenger}
+\position{Ph.D.} % `xx`was `software architect`
+\address{2226 Frederick Ave., Kalamazoo, Michigan 49008}
+
+\mobile{(616) 799-4352}
+\email{aaron.wenger@protonmail.com}
+%\dateofbirth{January 1st, 1970}
+%\homepage{www.posquit0.com}
+\github{ace-wenger}
+\linkedin{Aaron Wenger}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+   {Cody Williams}
+   {Western Michigan University\\1903 W Michigan Ave\\Kalamazoo, MI 49008}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Post-Graduate Fellow with Science and Mathematics Program Improvement (SAMPI)}
+% How the letter is opened
+\letteropening{Dear Dr. Williams,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Aaron C. Wenger~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+I can't tell you how glad I am to be able to offer my application to the SAMPI Post-Graduate Fellow position as a PhD graduate!
+Both because I have graduated and, more importantly, because of the time I spent working with you, Bob (/Robert), Michelle, and the rest of the SAMPI team. 
+Those two years were the highlight of my doctoral degree and contributed greatly to my eventual graduation.
+Thank you for offering me the assistantship those few years ago and thank you again for encouraging me to apply to this position.
+
+Compared to my time as a graduate assistant, I am very confident that I have a great deal more to contribute to the SAMPI team and to the work on the MiSTEM Network project.
+In my dissertation, I implemented many data management principles to keep data organized and to ease its analysis.
+I constructed a database with four separate tables to track multiple observational units (citations, studies, and effect sizes) across five phases of data collection.
+I believe that some of the lessons I learned can be applied to make data on MiSTEM activities more useful for addressing different questions.
+For example, the occurrence of activities by region could be integrated with the evaluation results for individual activities.
+This would improve accessibility and readability of collected data compared with keeping distinct datasets across multiple folders and make their analysis and reporting more efficient.
+
+I also believe that I have learned much about computational reproduciblity, such as the importance of documentation and adoption of style standards (e.g., how variables are named), which may be implemented to enhance collaboration and streamline processes.
+You may remember some of the ideas I had during my assistantship for improving our work.
+Seeing a large project through, from start to finish, has given me a broader, more practical perspective on research and evaluation work.
+As before, I see many potential improvements to my own workflow which may be applicable to that of the whole team, but I would say that I am now more focused on the product - useful results - than the process of research.
+
+Working in this position would be very helpful for me as I start my career.
+My aspiration is to responsibly apply data to support teachers and policy-makers in their work so that the greatest benefit might be realized for students.
+At the same time I hope to contribute towards excellence in educational research and evaluation methods through my own meta-research work.
+Working at SAMPI forwards both of these goals due to the nature of the work that SAMPI does (such as that with the MiSTEM network) and by providing me the opportunity to engage in the general research enterprise full-time and thus reflect on and improve my own practices.
+
+One of my first goals should I be accepted, would be to develop my skills for constructing data dashboards.
+I have a little experience from my assistantship and additional experience from my dissertation work on creating dashboards in R.
+(While I understand the general idea, I would need to become acquainted with the specifics.)
+I look forward to the challenge of implementing a data dashboard in PowerBI or in any other platform.
+Thank you for your consideration of my application!
+    
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

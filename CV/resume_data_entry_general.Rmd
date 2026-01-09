@@ -1,0 +1,111 @@
+---
+name: Aaron Wenger
+date: "`r format(Sys.time(), '%B, %Y')`"
+# profilepic: pic.jpg
+qualifications: B.S., MA
+position: "Ph.D Candidate"
+address: "Kalamazoo, Michigan"
+email: "aaron.wenger@protonmail.com"
+#website:
+github: ace-wenger
+linkedin: aaron-wenger-a6b7b724a
+# orcid: 000-0002-1972-3001
+aboutme: "Detail-oriented and proactive job candidate with: 1) extensive experience collecting, processing, and analyzing numeric and textual data; 2) strong problem-solving and research skills; and 3) developed time and project managment skills. Seeking temporary or short-term work while closing out degree work."
+headcolor: e62e00 # for red
+docname: Resume
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+<!-- I am a detail‑oriented and proactive job candidate with: 1) extensive experience collecting, processing, and analyzing numeric and textual data, and 2) strong problem‑solving and research skills. I am seeking temporary or short‑term work while closing out degree work and navigating long-term career plans. -->
+
+<!-- I am well-suited to data entry given my extensive experience with data-driven projects and specifically my experience with collection, processing, and analysis of numeric, textual, and photographic data. I appreciate that data has a lifecycle and the complications caused by messy data structuring or formatting. My independent and collaborative work demonstrates my ability to learn, adapt, and function well in a project team. -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Education and Experience (by date)
+
+```{r}
+tribble(
+  ~ role, ~ years, ~ institution, ~ loc, ~ details,
+  ## Ph.D. Candidate in Science Education
+  "Ph.D. Candidate in Science Education", 
+  "2017-present", "Western Michigan University", "Kalamazoo, Michigan", 
+  list(
+    "Designed and implemented data collection and processing procedures in two major projects",
+    "Implemented safe data handling and data management practices",
+    # "Extensive experience with scripted software tools and Microsoft Office",
+    "Independently set timelines, managed project activities, and initiated collaborations",
+    "Independently learned R (a programming language for statistics and data analysis)",
+    "Practiced various types of writing: grant/project proposals, technical/narrative reports, SOPs, other documentation, and scientific research articles",
+    "Currently finishing degree work"),
+  ## Graduate Research Assistant in SAMPI
+  "Graduate Research Assistant in Science And Mathematics Program Improvement (SAMPI)",
+  "2021-2023", "", "",
+  list(
+    "Corresponded with clients, both initial and followup contacts",
+    "Coordinated project work via email and virtual meetings with several team members",
+    "Conducted literature reviews to support development of data collection instruments",
+    "Collected, processed, and archived interview transcripts, survey data, and teacher observations",
+    "Wrote internal and external reports summarizing findings for meaningful conclusions and insights",
+    "Recorded time on task for billing, participated in internal collaborations"),
+  ## Masters
+  "M.A. in Biological Sciences", 
+  "2017-2021", "", "",
+  list(
+    "Collected, processed, and archived measurements and photos",
+    "Kept records of project work and data collection activities"),
+  ## Bachelors
+  "B.S. in Biology-Health Sciences", 
+  "2011-2015", "Cornerstone University", "Grand Rapids, Michigan", 
+  list(
+    "Transferred over 200 pages of handwritten fieldnotes into excel spreadsheets in internship work",
+    "Catalogued chemical supplies in laboratory assistantship")
+) %>% detailed_entries(role, years, institution, loc, details)
+```
+
+# Competencies
+
+## General Skills
+
+```{r}
+tribble(
+  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,
+  "Writing and Communication", "extensive experience writing technical documents, protocols, reports, and email memos for internal and external use", "", "", "",
+  "Research and Problem-Solving", "substantial experience finding and implementing solutions to technical problems", "", "", "",
+  "Project and Time Management", "substantial experience planning and organizing long- and short-term project work, and managing/recording time-on-task", "", "", "",
+  "Collaboration and Teamwork", "substantial experience coordinating project work with colleagues", "", "", "",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
+## General Software Tools
+
+```{r}
+tribble(
+  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,
+  "Microsoft Office Suite", "extensive experience with Word, PowerPoint, Excel, Outlook, and Teams", "", "", "",
+  "WebEx and Zoom", "extensive experience collaborating with colleagues via these platforms", "", "", "",
+  "Google Forms", "substantial experience in creating survey forms for data colleciton and processing results", "", "", "",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
+## Advanced Software Tools for Data Handling and Analysis
+
+```{r}
+tribble(
+  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,
+  "R", "substantial programming experience with R for data handling, processing, and analysis'", "", "", "", 
+  "Git and GitHub", "substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform", "", "", "",
+  "Analysis Pipeline Tools", "substantial experience implementing data analysis pipelines, automating the processing of raw, messy data to clean, useful data", "", "", "",
+  "Excel VBA","minor programming experience creating macros to process messy data from Google Forms", "", "", "",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), .protect = FALSE)
+```
+

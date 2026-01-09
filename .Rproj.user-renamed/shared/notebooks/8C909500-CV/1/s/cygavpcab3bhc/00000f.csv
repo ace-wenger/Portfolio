@@ -1,0 +1,7 @@
+"0","tribble("
+"0","  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,"
+"0","  ""Quarto"", ""substantial experience creating reports and presentations"", ""See portfolio, `--- --- --- (research project)'"", """", """","
+"0","  ""Rmarkdown"", ""substantial experience creating data analysis notebooks, reports, and other documents such as this CV"", ""See portfolio, `--- --- ---`"", """", """","
+"0","  ""LaTeX"", ""minor working experience such as in this CV"", ""See portfolio, `--- --- ---`"", """", """","
+"0",") %>% "
+"0","  brief_entries(glue::glue(""\\textbf{<what>}: <detail> (<portfolio_link>)"", .open = ""<"", .close = "">""), .protect = FALSE)"

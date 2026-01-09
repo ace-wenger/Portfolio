@@ -1,0 +1,107 @@
+---
+name: Aaron Wenger
+date: "`r format(Sys.time(), '%B, %Y')`"
+# profilepic: pic.jpg
+qualifications: B.S., MA
+position: Ph.D.
+address: 2226 Frederick Ave.  |  Kalamazoo, Michigan 49008
+number: (616) 799-4352
+email: aaron.wenger@protonmail.com
+#website:
+headcolor: e62e00
+# for red
+github: ace-wenger
+# linkedin: aaron-wenger-a6b7b724a
+# orchid: https://orcid.org/0000-0002-1972-3001
+aboutme: "Detail-oriented applicant with extensive experience in experimental design, computational reproducibility, and applied statistical analysis seeking the Statistician role in the Non-Clinical and Diagnostics Statistics group. Brings expertise in statistical programming (R, SPSS, SAS) and molecular biology to drive data-driven decision-making in diagnostics and pharmaceutical development. Adept in collaborating with interdisciplinary teams to create robust study designs and execute multivariate analyses. Committed to advancing innovative statistical methods, fostering robust research practices, and mentoring peers." 
+docname: Zoetis Stats Resume
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Professional Skills
+
+```{r}
+tribble(
+  ~ what, ~ dummy, ~ institution, ~ loc, ~ details,
+  "Design and Statistical Analysis of Experiments", "",
+  "", "", 
+  list(
+    "Designed and implemented *make*-like analysis pipelines to collect, clean, and process data in R", 
+    "Applied multilevel regression modeling and random forest machine learning with complex data structures", 
+    "Created study assessment tool which was applied to 400+ experimental and quasi-experimental studies judging internal validity and threat of bias"
+  ),
+  ##
+  "Project Management and Communication", "",
+  "", "", 
+  list(
+    "Planned large project requiring 1,500+ hours, identifying the critical path for progress and key deliverables (e.g., analytic results)", 
+    "Organized and maintained a working group of peers for related projects",
+    "Presented project results to peers and non-experts in multiple venues"
+  ),
+  ##
+    "Technical Knowledge and Self-Development", "",
+  "", "", 
+  list(
+    "Knowledge of advanced molecular biology topics and processes (e.g., western blotting, plasmid engineering, PCR)", 
+    "Self-taught the R programming language, specialized topics in statistics  (e.g., meta-analysis), and machine learning methods - all for dissertation projects"
+  )
+) %>% detailed_entries(what, dummy, institution, loc, details)
+```
+
+# Experience
+
+```{r}
+tribble(
+  ~ what, ~ dummy, ~ institution, ~ loc, ~ details,
+  "Graduate Research Assistant in Science And Mathematics Program Improvement (SAMPI)", "2021-2023",
+  "Western Michigan University", "Kalamazoo, Michigan",
+  list(
+    "Created protocols and tools in collaboration with external clients and internal staff", 
+    "Conducted quantitative and qualitative analysis of continuous, ordinal, and textual data", 
+    "Wrote internal and external reports summarizing findings and key action points",
+    "Extensive experience collaborating in \\textit {Microsoft Office Suite} products",
+    "Developed Excel VBA macro for data processing in excel for team members"
+  ),
+  "Teaching Assistant", "2017-2021", 
+  "Western Michigan University", "Kalamazoo, Michigan", 
+  list("Taught science courses including chemistry and biology")
+) %>% detailed_entries(what, dummy, institution, loc, details)
+```
+
+# Education and Additional Competancies
+
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "Ph.D. in Science Education", 
+  "Western Michigan University", 
+  "Kalamazoo, Michigan", 
+  "2017-present", 
+  list(
+    "Sucessfully defended dissertation, degree to be awarded December 2024 (concurrently enrolled in Biology program up to 2021)",
+    "Named the \\textbf{2023-2024 Department Graduate Research and Creative Scholar}, in recognition of excellence in research and creative scholarship",
+    "Learned SAS and SPSS for statistical analysis",
+    "Implemented data analysis pipelines in R for data processing and statistical analysis",
+    "Leveraged tools for parametrized reporting (Rmarkdown, Quarto) including this resume"
+  ),
+  ##
+  "M.A. in Biological Sciences", 
+  "Western Michigan University", 
+  "Kalamazoo, Michigan", 
+  "2017-2021",
+    list("Master's Thesis Project: Engineered Flagellin Disulfide Variants in Salmonella typhimurium"),
+  ##
+  "B.S. in Biology-Health Sciences - minors in Chemistry, Ancient (History) Studies", "Cornerstone University", 
+  "Grand Rapids, Michigan", "2011-2015",
+    list("Recipient of the Ronald Meyer Academic Scholar, Dean's list (6 of 7 semesters), and President's Scholarship")
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details)
+```

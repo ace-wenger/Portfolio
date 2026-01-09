@@ -1,0 +1,136 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[circle,noedge,left]{books}
+\name{Aaron C.}{Wenger}
+\position{Ph.D.} % `xx`was `software architect`
+\address{2226 Frederick Ave., Kalamazoo, Michigan 49008}
+
+\mobile{(616) 799-4352}
+\email{aaron.wenger@protonmail.com}
+%\dateofbirth{January 1st, 1970}
+%\homepage{www.posquit0.com}
+\github{ace-wenger}
+\linkedin{Aaron Wenger}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+   {Recruitment Team}
+   {Zoetis\\333 Portage St\\Kalamazoo, MI 49007}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Statistician in Non-clinical and Diagnostics Statistics Group}
+% How the letter is opened
+\letteropening{Dear Stewart Fossceco,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Aaron C. Wenger~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+I am excited to submit my application for the Statistician role in the Non-Clinical and Diagnostics Statistics group at Zoetis. With a Ph.D., extensive training in advanced statistical methods, and practical experience in both experimental design and multivariate analysis, I am well-prepared to contribute to the success of your team. My background in statistical programming, molecular biology, and a collaborative approach to study design and data analysis aligns with Zoetis's purpose to drive innovative animal care through data-driven decision-making in diagnostics and pharmaceutical development.
+
+All too often, data from experimental and quasi-experimental studies are unreliable and not useful for guiding decision-making. In my dissertation work, I investigated a large set of studies in education research to determine how reliable their results were using a study assessment tool and the statistical methods of meta-analysis. To increase the reliability of my own work, I programmed the entire analysis in R, documenting and automating the many decisions which are necessary in any complex analysis, making my results reproducible and extensible when addtional data is available or further analysis is required. I also learned machine learning techniques and applied the random forest algorithm to investigate which variables most strongly predict study results, providing context to the findings of my primary analysis.
+
+In my recent role as a Graduate Research Assistant at Western Michigan University, I came to appreciate that data and statistical analyses are only useful if they are being used by decision-makers. In evaluation work of several large grant programs, regular cross-functional meetings with internal staff and external clients were necessary to develop tools and processes which correctly identified and addressed the research problem and so were useful. Through this experience and my dissertation work, I also appreciated the importance of having a team to work alongside and with whom new processes for innovative work can be developed. I shared new approaches to organizing and managing our work and participated in efforts to streamline the production and deployment of data dashboards. In my dissertation work, I also organized a working group of peers, presenting innovative tools and providing input on their projects. I believe that only effective collaborations of motivated individuals can produce effective results. 
+
+I am enthusiastic about the opportunity to contribute to innovative research and development at Zoetis and am confident that my technical and interpersonal skills will make a meaningful impact on your team. Thank you for considering my application. I look forward to discussing how my background, skills, and goals align with Zoetis's objectives.
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

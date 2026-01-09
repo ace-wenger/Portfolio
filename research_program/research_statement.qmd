@@ -1,0 +1,42 @@
+---
+title: "Research Statement"
+author: "Aaron Wenger, Ph.D. Science Education"
+format: docx
+
+reference-doc: garamond-reference-doc2.docx
+# bibliography: references.bib
+csl: apa.csl
+---
+
+::: {.content-hidden}
+Outline
+
+:::
+
+Epistemology is the branch of philosophy which considers one of the few fundamental questions: how do we know what we know? 
+It is commonly understood that scientific knowledge accumulates through the independent work of researchers who  adhere to a common set of standards for their investigations.
+This process for the accumulation of knowledge is thought to be inherently robust, however, recent developments in medical and psychological research (i.e., the replication crisis) have surfaced a variety of challenges.
+These challenges are addressed in part by applying scientific standards and methods in the form of research synthesis studies to critical assess the current state of the research literature.
+Research syntheses thus improve our understanding of our collective knowledge, increase the rigor of scientific research, and assist in bridging the research-practice gap.
+
+Education research seeks to improve outcomes for students, teachers, and other stakeholders.
+However, I believe that there are three compounding challenges that will severely hamper future progress by inhibiting theory development and diminishing the usefulness of research for education policies and practices.
+First, for most research topics the full set of published studies cannot be discovered, read, and understood by any one person and this challenge compounds year after year.
+This large number of studies also drives the costs of conducting research syntheses which often take thousands of hours to complete.
+Second, studies yield inconsistent results - a curriculum may be very beneficial in one study but less beneficial or even comparatively harmful in others.
+If inconsistent results can be explained, they are an important driver of theory development; unfortunately, they rarely are in education research.
+Third, even with large numbers of studies, most real-world contexts which are relevant to teachers and policy-makers go uninvestigated.
+If a vast landscape is imagined in which every place represents a unique combination of student populations, school subjects, and available resources (among other factors), only the barest fraction might be directly investigated.
+
+Meeting the above challenges and realizing the promise of education research to improve outcomes for all students will require, among other things, innovative tools and methods for research syntheses.
+While many researchers have been exploring the applications of large language models for identifying and extracting data from relevant studies, the initial discovery and collection of these studies has received far less attention.
+The principal problem of discovery is the dispersion of studies across many databases and repositories.
+OpenAlex is a metadatabase which aggregates and standardizes bibliometric data (e.g., author names) for academic works across most of these sources.
+Over the coming years, I will be investigating the development of tools that leverage such metadatabases to greatly reduce the cost of discovering and collecting studies.
+If the effort to conduct a research synthesis can be significantly reduced, then the saved effort may go towards more (or more robust) research syntheses.
+
+One such way that research syntheses could become more robust, is their handling of inconsistent results.
+The historical practice of research syntheses has been to summarize many study results into a statistical average and use it to support universal recommendations for education policies and practices.
+And yet, while such averages may prove robust in practice across large populations or for the typical case, too often they are misleading and mask a variable landscape of results.
+My dissertation work addressed the variations in the research landscape by applying the latest statistical modeling methods. 
+Much work remains to develop these methods and apply them across the many pressing questions that policy-makers and teachers have.

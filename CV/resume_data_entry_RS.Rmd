@@ -1,0 +1,97 @@
+---
+name: Aaron Wenger
+date: "`r format(Sys.time(), '%B, %Y')`"
+# profilepic: pic.jpg
+qualifications: B.S., MA
+position: "Ph.D Candidate"
+address: "Kalamazoo, Michigan"
+email: "aaron.wenger@protonmail.com"
+#website:
+github: ace-wenger
+linkedin: aaron-wenger-a6b7b724a
+# orcid: 000-0002-1972-3001
+aboutme: "Detail-oriented and proactive job candidate with: 1) extensive experience collecting, processing, and analyzing numeric and textual data; and 2) substantial first-hand experience and knowledge of home remodeling industry. Seeking a Remote Data Entry Clerk position at Remodeling Star."
+headcolor: e62e00 # for red
+docname: Resume
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+<!-- https://www.ziprecruiter.com/jobs/remodeling-star-inc-646fd4d9/remote-data-entry-clerk-d10be8f9?lvk=IZCLzER3PEIaoo0SenC_cw.--NRHF0hdPB&expires=1721040377&contact_id=98dc1079&zrclid=52d2e452-aa22-46d8-add8-19bc6d58fca0&tsid=111000038&utm_campaign=87661 -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Education and Experience (by date)
+
+```{r}
+tribble(
+  ~ role, ~ years, ~ institution, ~ loc, ~ details,
+  ## Remodeling experience
+  "Homeowner, remodeler", 
+  "2023-2024", "Current Home", "Kalamazoo, Michigan",
+  list("Completed extensive remodeling work, including: upgraded electrical system, drywall hanging and finishing, kitchen cabinet assembly and installation."),
+  ## Ph.D. Candidate in Science Education
+  "Ph.D. Candidate in Science Education", 
+  "2017-present", "Western Michigan University", "Kalamazoo, Michigan", 
+  list(
+    "Designed and implemented data collection and processing procedures in two major projects",
+    "Implemented safe data handling and data management practices",
+    "Extensive experience with scripted software tools and Microsoft Office",
+    "Independetly set timelines, managed project activities, and initiated collaborations",
+    "Currently finishing degree work"),
+  ## Graduate Research Assistant in SAMPI
+  "Graduate Research Assistant in Science And Mathematics Program Improvement (SAMPI)",
+  "2021-2023", "", "",
+  list(
+    "Corresponded with clients, both initial and followup contacts", 
+    "Collected, processed, and archived various types of data and documents",
+    "Wrote internal and external reports summarizing findings",
+    "Recorded time on task for billing, participated in internal collaborations"),
+  ## Masters
+  "M.A. in Biological Sciences", 
+  "2017-2021", "", "",
+  list("Kept records of project work and data collection activities"),
+  ## Summer remodeling work
+  "House Remodelling Contracter", 
+  "2014-2021 (mostly summers)", "Tom Wenger Kitchen & Bath", "Belding, Michigan",
+  list("General remodelling work: demolitions, drywall hanging, cabinet installation, some tile and framing rough-in"),
+  ## Bachelors
+  "B.S. in Biology-Health Sciences", 
+  "2011-2015", "Cornerstone University", "Grand Rapids, Michigan", 
+  list("Transferred over 200 pages of handwritten fieldnotes into excel spreadsheets in internship work")
+) %>% detailed_entries(role, years, institution, loc, details)
+```
+
+# Competencies
+
+## General Skills and Software
+
+```{r}
+tribble(
+  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,
+  "Writing and Communication", "extensive experience writing technical documents, protocols, reports, and email memos for internal and external use", "", "", "",
+  "Research and Problem-Solving", "Substantial experience finding and implementing solutions to technical problems", "", "", "",
+  "Microsoft Office Suite", "extensive experience with Word, PowerPoint, Excel, Outlook, and Teams", "", "", "",
+  "Google Forms", "substantial experience in creating survey forms for data colleciton and processing results", "", "", "",
+  "Excel VBA","minor programming experience creating macros to process messy data from Google Forms", "", "", "",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
+## Advanced Tools for Data Handling and Analysis
+
+```{r}
+tribble(
+  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,
+  "R", "substantial programming experience with R for data handling, processing, and analysis'", "", "", "", 
+  "Git and GitHub", "substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform", "", "", "",
+  "Analysis Pipeline Tools", "substantial experience implementing data analysis pipelines, automating the processing of raw, messy data to clean, useful data", "", "", ""
+) %>% 
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), .protect = FALSE)
+```
+

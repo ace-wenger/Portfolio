@@ -1,0 +1,109 @@
+---
+title: "In Memoriam"
+format:
+  modern2-cv-pdf: default
+author: Sir William Osler
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  alt: 464646
+  accent: 6A2C70
+jobtitle: Father of Modern Medicine
+bibliography: works.bib
+citeproc: true
+csl: vancouver.csl
+csl-refs: true
+sidebar:
+  image: portrait.jpg
+  bullets:
+    - Canadian
+    - Physician
+    - Sweet Moustache
+  sections: 
+    - name: About
+      items:
+        - exposition: true
+          p1: |
+            Physician, pathologist, internist, educator, bibliophile, author and historian.
+          p2: |
+             "He who studies medicine without books sails an uncharted sea, but he who studies medicine without patients does not go to sea at all."
+    - name: Skills
+      items:
+        - text: Physical Examination
+          exp: 
+            text: "10+ yrs."
+            num: 1
+        - text: Python
+          exp: 
+            text: "0 yrs."
+            num: 0
+    - name: Education
+      items:
+        - text: "Doctor of Medicine"
+          inst: "University of Toronto"
+          time: "1869 - 1872"
+    - name: Contact
+      items:
+        - icon: envelope-open
+          text: What is Email?
+        - icon: phone-alt
+          text: "0000 0002"
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,role,items){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", tbl[[role]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+```
+
+# Experience
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "Regis Professor of Medicine",
+    "Oxford University", "1905-1919",
+    "Died in office.",
+    
+    "Another Position",
+    "Somewhere else", "",
+    "Demonstrating that an item can be added with a blank date period."
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Publications
+
+---
+nocite: |
+  @*
+---
+
+::: {#refs}
+:::

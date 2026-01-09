@@ -1,0 +1,8 @@
+"0","tribble("
+"0","  ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2,"
+"0","  ""R"", ""substantial programming experience with base R, Rstudio, and common packages"", ""See \\href{https://github.com/ace-wenger/ERR_ConceptMapping-inBioEd/tree/master/scripts}{ConceptMapping-inBioEd/scripts}"", """", """", "
+"0","  ""Git and GitHub"", ""substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform"", ""See my GitHub account for several public projects"", """", """","
+"0","  ""SPSS and SAS"", ""minor programming experience"", ""See \\href{https://github.com/ace-wenger/Portfolio/sas}{Portfolio/sas}"", """", """", "
+"0","  ""Excel VBA"",""minor programming experience"", ""See \\href{https://github.com/ace-wenger/Portfolio/vba}{Portfolio/vba}"", """", """""
+"0",") %>% "
+"0","  brief_entries(glue::glue(""\\textbf{<what>}: <detail> (<portfolio_link>)"", .open = ""<"", .close = "">""), .protect = FALSE)"

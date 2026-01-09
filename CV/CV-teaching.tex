@@ -1,0 +1,292 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{e62e00}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Aaron Wenger}{}
+
+\position{Graduate Student}
+\address{Kalamazoo, Michigan}
+
+\email{\href{mailto:aaron.wenger@protonmail.com}{\nolinkurl{aaron.wenger@protonmail.com}}}
+\github{ace-wenger}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{I am a Ph.D.~candidate in the Mallinson Institute of Science
+Education program. I have a passion for 1) teaching and learning at all
+levels and subjects, particularly biology in higher education and 2) the
+role and nature of evidence for decisions in education. Example work can
+be found on my Github page in the `Portfolio' repository.}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {April, 2024}
+    {Aaron Wenger~~~·~~~CV}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\section{Education}\label{education}
+
+\begin{cventries}
+    \cventry{Ph.D. Student in Science Education}{Western Michigan University}{Kalamazoo, Michigan}{2017-present}{\begin{cvitems}
+\item Ph.D. candidate, currently completing dissertation project with a defense planned for summer 2024
+\item Advised and chaired by Dr. William Cobern
+\end{cvitems}}
+    \cventry{Projects/Manuscripts in Progress (Working Titles)}{}{}{}{\begin{cvitems}
+\item Dissertation: Beyond Average Effects in Education Research: Explaining heterogeneity of concept mapping research in science education through meta-regression modeling \begin{enumerate} \item[] \textbf{Article 1:} Challenges and Solutions for Knowledge Accumulation in Science Education Research \item[] \textbf{Article 2:} Concept Mapping in Biology Education: \textit{A Systematic Review and Meta-Analysis} \item[] \textbf{Article 3:} Explaining Heterogeneity in Science Education Research: \textit{Comparing machine learning models with a priori meta-regression models} \end{enumerate}
+\item Mapping the Homeschooling Literature: \textit{A Scoping Review and Source Analysis}
+\end{cvitems}}
+    \cventry{M.A. in Biological Sciences}{Western Michigan University}{Kalamazoo, Michigan}{2017-2021}{\begin{cvitems}
+\item Master's Thesis Project: Engineered Flagellin Disulfide Variants in Salmonella typhimurium
+\item Advised by Dr. Brian Tripp
+\end{cvitems}}
+    \cventry{B.S. in Biology-Health Sciences - minors in Chemistry, Ancient (History) Studies}{Cornerstone University}{Grand Rapids, Michigan}{2011-2015}{\begin{cvitems}
+\item Recipient of the Ronald Meyer Academic Scholar, Dean's list (6 of 7 semesters), and President's Scholarship
+\item Senior Thesis Project: a meta-study of the neural crest as a mechanism for vertebrate phenotypic diversity
+\item Internship: Hesse Memorial Archaelogical Laboratory, learned and applied zooarcheological techniques with animal bone remains
+\end{cvitems}}
+\end{cventries}
+
+\section{Teaching Experience}\label{teaching-experience}
+
+\begin{cventries}
+    \cventry{Teaching Assistant}{Western Michigan University}{Kalamazoo, Michigan}{2017-2021}{\begin{cvitems}
+\item Instructor of record for lecture/lab science content courses for elementary education majors
+\item CHEM 2800: Physical Science for Elementary Educators: a inquiry-based, activity-centered course covering basic chemical and physical science principles
+\item BIOS 1700 in-person: Life Science for Non-Majors: a laboratory-lecture-based content course covering major topics in the life sciences
+\item BIOS 1700 virtual: An adaptation of BIOS 1700 to an online synchronous format, for which I was responsible to design and implement
+\item GEOG 1900: Exploring Earth Science, the Atmosphere: A laboratory-based course covering basic earth science principles with an emphasis on the atmosphere; taught as a virtual, partially synchronous course
+\end{cvitems}}
+    \cventry{Lecturer for Pre-Med Intiative}{}{}{2018}{\begin{cvitems}
+\item A student-led program for MCAT exam preparation
+\end{cvitems}}
+    \cventry{Science Teacher}{Friday Addition (FA) and Homeschool Ancillary Program (HsAP)}{Michigan}{2015-2017}{\begin{cvitems}
+\item Developed and taught 9th grade biology, 7th grade general science, and 10th grade chemistry.
+\end{cvitems}}
+    \cventry{College Tutor and Laboratory Assistant}{Cornerstone University}{Grand Rapids, Michigan}{2012-2015}{\begin{cvitems}
+\item Tutored undergraduate genetics, chemistry, physics, math, and history
+\item Assisted in stockroom, ordering materials, organizing activities, and grading laboratory reports
+\end{cvitems}}
+    \cventry{Areas of Expertise for Teaching and Public Engagement}{}{}{}{\begin{cvitems}
+\item 1) Scientific methods, experimental design, causal inference, and philosophy of science
+\item 2) Introductory and advanced biology subjects, particularly microbiology and molecular biology
+\item 3) History of educational psychology and science education
+\item 4) Statistical and computational research methods using R, especially computational reproducibility
+\end{cvitems}}
+\end{cventries}
+
+\section{Research Experience}\label{research-experience}
+
+\begin{cventries}
+    \cventry{Research Interests}{}{}{}{\begin{cvitems}
+\item 1) Meta-research methods, especially meta-analysis and bibliometrics
+\item 2) Computational reproducibility and open science practices
+\item 3) Role of evidence in educational policy and practice
+\end{cvitems}}
+    \cventry{Graduate Research Assistant in Science And Mathematics Program Improvement (SAMPI)}{Western Michigan University}{Kalamazoo, MI}{2021-2023}{\begin{cvitems}
+\item Assisted in program evaluation for clients including NSF-funded Professional development for Emerging Education Researchers (PEER) field school,  Kalamazoo Scholars Program, and the Michigan STEM Network (MiSTEM
+\item Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)
+\item Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data
+\item Wrote internal and external reports summarizing findings
+\end{cvitems}}
+\end{cventries}
+
+\section{Portfolio and Further
+Education}\label{portfolio-and-further-education}
+
+\subsection{Software for Statistics and Data
+Science}\label{software-for-statistics-and-data-science}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{R}: substantial programming experience with base R, the Rstudio IDE, and common packages such as 'ggplot' (See \href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\textit{ConceptMapping-inBioEd}})}{}{}
+    \cvhonor{}{\textbf{Git and GitHub}: substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform (See my GitHub account for several public projects)}{}{}
+    \cvhonor{}{\textbf{Analysis Pipeline Tools}: substantial experience implementing data analysis pipelines with the `targets` and `renv` R packages (See \href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\textit{ConceptMapping-inBioEd}})}{}{}
+    \cvhonor{}{\textbf{SPSS and SAS}: minor programming experience with both (See \href{https://github.com/ace-wenger/Portfolio/sas}{\textit{Portfolio/sas}})}{}{}
+    \cvhonor{}{\textbf{Excel VBA}: minor programming experience (See \href{https://github.com/ace-wenger/Portfolio/vba}{\textit{Portfolio/vba}})}{}{}
+\end{cvhonors}
+
+\subsection{Software for Documentation and
+Reporting}\label{software-for-documentation-and-reporting}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Microsoft Office Suite}: extensive experience with Word, PowerPoint, Excel, Outlook, and Teams }{}{}
+    \cvhonor{}{\textbf{Quarto}: substantial experience creating reports and presentations }{}{}
+    \cvhonor{}{\textbf{Rmarkdown}: substantial experience creating data analysis notebooks, reports, and other documents such as this CV }{}{}
+    \cvhonor{}{\textbf{LaTeX}: minor working experience using the TeXworks IDE such as in this CV }{}{}
+\end{cvhonors}
+
+\subsection{Other Software}\label{other-software}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Qualtrics}: substantial experience in creating survey forms, distributing to program participants, and processing results }{}{}
+    \cvhonor{}{\textbf{Google Forms}: substantial experience in creating survey forms and processing results }{}{}
+    \cvhonor{}{\textbf{Abstrackr and MetaReviewer}: substantial experience in these platforms for meta-research studies }{}{}
+\end{cvhonors}
+
+\subsection{Workshops and Online
+Courses}\label{workshops-and-online-courses}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Instats: Confirmatory factor analysis and structural equation modeling in R}: Taught by Michael Zyphur and with certificate of completion}{}{2023}
+    \cvhonor{}{\textbf{Instats: Meta-analytic structural equation modeling}: Taught by Mike Cheung and with certificate of completion}{}{2023}
+    \cvhonor{}{\textbf{Evidence Synthesis and Meta-Analysis in R (ESMAR) Conference}: several workshops including: Advanced GitHub, Screening studies for eligibility in evidence syntheses}{}{2023}
+    \cvhonor{}{\textbf{Excel VBA Programming}: video course introducing VBA programming and various applications such as macro implementation, userforms, and webscraping}{}{2022}
+    \cvhonor{}{\textbf{Research Transparency Online Course}: put on by the Berkeley Initiative for Transparency in the Social Sciences (BITSS)}{}{2022}
+    \cvhonor{}{\textbf{Reproducible Research Tutorial Series}: online course by Dr. Schloss of the University of Michigan, supported by NIH}{}{2022}
+    \cvhonor{}{\textbf{Instats: Path analysis with interactions and indirect effects in R}: Taught by Michael Zyphur}{}{2022}
+    \cvhonor{}{\textbf{Bibliometrics Training Series}: put on by the NIH Library}{}{2021}
+    \cvhonor{}{\textbf{AERA-ICPSR PEERS}: attended several in this workshop series including: Modern Meta-analysis, Cutting-edge Quatitative and Computational Methods for STEM Education, and Introduction to qualitative meta-synthesis methods}{}{2020-21}
+    \cvhonor{}{\textbf{Introduction to Systematic Reivew and Meta-Analysis}: a John Hopkins University course hosted by Coursera}{}{2020}
+\end{cvhonors}
+
+\section{Grants and Professional
+Experience/Service}\label{grants-and-professional-experienceservice}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Graduate Student Panel Reviewer} \newline Reviewed five papers each for Division D (Measurement \& Research Methodologies) and SIG-SRMA (Systematic Review and Meta-Analysis special interest group)}{AERA Annual Meeting}{2024}
+    \cvhonor{}{\textbf{Graduate Student Research Grant} \newline Secured for Science Education Research Project}{Western Michigan University}{2021}
+    \cvhonor{}{\textbf{Graduate Student Research Grant} \newline Institutional grant secured for biology master thesis project}{Western Michigan University}{2019}
+\end{cvhonors}
+
+\section{Presentations and
+Publications}\label{presentations-and-publications}
+
+\phantomsection\label{refs-9d4a94543a88655e382d9ea4bed7b91a}
+\begin{CSLReferences}{0}{0}
+\bibitem[\citeproctext]{ref-WCrcm2023}
+\CSLLeftMargin{1. }%
+\CSLRightInline{Wenger, A., \& Cobern, W. (2023). \emph{Replication of
+concept mapping research in biology education: A systematic review and
+meta-analysis.} {[}Conference{]}. Michigan Academy of Science Arts and
+Letters Annual Conference, Berrien Springs, Michigan.
+\url{https://ace-wenger.quarto.pub/masal23-concept-mapping/}}
+
+\bibitem[\citeproctext]{ref-WWeef2023}
+\CSLLeftMargin{2. }%
+\CSLRightInline{Williams, C., \& Wenger, A. (2023). \emph{Evaluating the
+effects of field schools on emerging STEM education researchers.}
+{[}Conference{]}. Michigan Academy of Science Arts and Letters Annual
+Conference, Berrien Springs, Michigan.}
+
+\end{CSLReferences}
+
+
+
+\end{document}
