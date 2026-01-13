@@ -26,39 +26,33 @@ library(tibble)
 ```
 
 # Professional Profile
-I am a post-doctoral fellow with the Science and Mathematics Program Improvement unit which is associated with the Mallinson Institute of Science Education at Western Michigan University. 
-I am also a recent graduate of the Mallinson Institute, and I am currently preparing several manuscripts for publication from my dissertation and associated work.
+I am a post-doctoral fellow with Science and Mathematics Program Improvement, a unit which is associated with the Mallinson Institute of Science Education at Western Michigan University. 
+I am also a recent graduate of the Mallinson Institute.
 
 ```{r}
 tribble(
   ~ what, ~ dummy, ~ institution, ~ loc, ~ details,
   ## Research Interests
   "Research Interests", "",
-  "", "", 
+  "", "",
   list(
-    "1) Role of evidence in educational policy and practice",
-    "2) Meta-research methods, especially meta-analysis and bibliometrics", 
-    "3) Computational reproducibility and open science practices"
+    "1) Role and application of evidence in educational policy and practice",
+    "2) Quasi-experimental study designs and their statistical analysis",
+    "3) Computational reproducibility and leveraging open source tools/data"
   ),
   ## Teaching and Public Engagement Interests
   "Teaching and Public Engagement Interests", "",
-  "", "", 
+  "", "",
   list(
-    "1) Scientific methods, experimental design, causal inference, and philosophy of science", 
-    "2) Introductory and advanced biology subjects, particularly microbiology and molecular biology", 
-    "3) History of educational psychology and science education", 
-    "4) Statistical and computational research methods using R, esecially computational reproducibility"
-  ),
-  ## Projects/Manuscripts in Progress (WORKNG TITLES)
-  "Projects/Manuscripts in Progress (WORKNG TITLES)", "",
-  "", "", 
-  list(
-    "Explaining Heterogeneity in Science Education Research: Comparing machine learning model with \\textit{a priori} meta-regression models (Dissertation Paper)",
-    "Challenges and Solutions for Knowledge Accumulation in Science Education Research (Dissertation Paper)",
-    "Mapping the Homeschooling Literature: A Scoping Review and Source Analysis",
-    "Impact of Different Literature Search Approaches on Informal Literature Reviews: Recommendations for consumers of education research"
-  ),
-  
+    "1) Experimental design, causal inference, and the role of evidence in 
+    education policy and practice",
+    "2) Introductory and advanced biology subjects, particularly microbiology 
+    and molecular biology",
+    "3) History of educational psychology and science education",
+    "4) Statistical and computational research methods using R, esecially 
+    computational reproducibility"
+  )
+
 ) %>% detailed_entries(what, dummy, institution, loc, details)
 ```
 
@@ -68,21 +62,37 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   ## PhD
-  "Ph.D. in Science Eduation: Biological Sciences", "Western Michigan University", 
+  "Ph.D. in Science Eduation: Biological Sciences",
+  "Western Michigan University",
   "Kalamazoo, Michigan", "2017-2024",
-    list("Dissertation: Beyond Average Effects in Education Research: \\textit{Explaining heterogeneity of concept mapping research in science education through meta-regression modeling}. A three-paper dissertation composed of two independent systematic reviews and meta-analyses - third paper is a position paper arguing for the particular uses of meta-analytic methods exemplified by my work",
-         "Comittee chaired by Dr. William Cobern, with Dr. Betty Adams and Dr. Ya Zhang",
-         "Concurrently enrolled in M.A. Biology program until spring 2021"),
+  list(
+    "Dissertation: Beyond Average Effects in Education Research: 
+    \\textit{Explaining heterogeneity of concept mapping research in science 
+    education through meta-regression modeling}. A three-paper dissertation 
+    composed of two independent systematic reviews and meta-analyses - third 
+    paper is a position paper arguing for the particular uses of meta-analytic 
+    methods exemplified by my work",
+    "Comittee chaired by Dr. William Cobern, with Dr. Betty Adams and 
+    Dr. Ya Zhang"
+  ),
   ## Masters
-  "M.A. in Biological Sciences", "Western Michigan University", 
+  "M.A. in Biological Sciences",
+  "Western Michigan University",
   "Kalamazoo, Michigan", "2017-2021",
-    list("Master's Thesis Project: Engineered Flagellin Disulfide Variants in Salmonella typhimurium. Advised by Dr. Brian Tripp"),
+  list(
+    "Master's Thesis Project: Engineered Flagellin Disulfide Variants in 
+    Salmonella typhimurium. Advised by Dr. Brian Tripp",
+    "Concurrently enrolled with Ph.D. Science Education program"
+  ),
   ## Bachelors
-  "B.S. in Biology-Health Sciences - minors in Chemistry, Ancient (History) Studies", "Cornerstone University", 
+  "B.S. in Biology-Health Sciences - minors in Chemistry, Ancient (History) Studies",
+  "Cornerstone University",
   "Grand Rapids, Michigan", "2011-2015",
-    list("Senior Thesis Project: a meta-study of the neural crest as a mechanism for vertebrate phenotypic diversity",
-         "Internship: Hesse Memorial Archaelogical Laboratory, learned and applied zooarcheological techniques with animal bone remains")
-) %>% 
+  list(
+    "Senior Thesis Project: a meta-study of the neural crest as a mechanism for vertebrate phenotypic diversity",
+    "Internship: Hesse Memorial Archaelogical Laboratory, learned and applied zooarcheological techniques with animal bone remains"
+  )
+) %>%
   detailed_entries(degree, dates, uni, loc, details)
 ```
 
@@ -99,23 +109,29 @@ tribble(
   "Graduate Research Assistant", "2021-2023",
   "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
   list(
-    "Assisted in program evaluation for clients including NSF-funded Professional development for Emerging Education Researchers (PEER) field school,  Kalamazoo Scholars Program, and the Michigan STEM Network (MiSTEM", 
-    "Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)", 
-    "Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data", 
+    "Assisted in program evaluation for clients including NSF-funded Professional development for Emerging Education Researchers (PEER) field school,  Kalamazoo Scholars Program, and the Michigan STEM Network (MiSTEM",
+    "Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)",
+    "Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data",
     "Wrote internal and external reports summarizing findings"
   ),
   ## Post-doc
   "Post-Doctoral Fellow", "2025-",
   "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
   list(
-    "Conducting evaluation work for MiSTEM Michigan Department of Education project",
+    "Conducted evaluation work for the MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher prprofessional development, and programs for students to advance STEM education in Michigan", 
+
+    "Created Qualtrics data collection instrument customized with extensive html
+    and javascript code",
+    "Designed and implemented a relational database to manage many thousands of
+    records, and develope data analysis pipelines to derive key program metrics",
     "Collecting and managing various sources of data",
     "Analyzing and making useful visualizations and other resources for data-driven decision-making"
   ),
   ## Certifications
   "Certified Reviewer", "2025",
   "What Works Clearinghouse (WWC)", "",
-  "Certified under v5.0 group design standards",
+  "Certified under v5.0 group design standards to conduct reviews of
+  experimental and quasi-experimental studies for the WWC",
 ) %>%
   arrange(desc(when)) %>%
   detailed_entries(what, when, with, where, why)
@@ -222,25 +238,25 @@ tribble(
 
 ```{r}
 tribble(
-  ~ what, ~ when, ~ with, ~ where, ~why,
+  ~what, ~when, ~with, ~where, ~why,
   "Graduate Student Panel Reviewer", "2024", "AERA Annual Meeting", "",
-    list("Served as graduate student reviewer for Division D (Measurement \\& Research Methodologies) and SIG-SRMA (Systematic Review and Meta-Analysis special interest group)"), 
-  "Teaching Assistant", "2017-2021", "Western Michigan University", "Kalamazoo, Michigan", 
-    list("Served as instructor of record, teaching science courses for primary education majors",
-       "CHEM 2800 - Physical Science for Elementary Educators: a inquiry-based, activity-centered course covering basic chemical and physical science principles",
-       "BIOS 1700 - Life Science for Non-Majors: a laboratory-lecture-based content course covering major topics in the life sciences; taught first as an in-person course then independently adapted to a virtual, partially synchronous implementation for 2020-21 fall/spring semesters",
-       "GEOG 1900 - Exploring Earth Science, the Atmosphere: A laboratory-based course covering basic earth science principles with an emphasis on the atmosphere; taught as a virtual, partially synchronous course"),
+  list("Served as graduate student reviewer for Division D (Measurement \\& Research Methodologies) and SIG-SRMA (Systematic Review and Meta-Analysis special interest group)"),
+  "Teaching Assistant", "2017-2021", "Western Michigan University", "Kalamazoo, Michigan",
+  list(
+    "Served as instructor of record, teaching science courses for primary education majors",
+    "CHEM 2800 - Physical Science for Elementary Educators: a inquiry-based, activity-centered course covering basic chemical and physical science principles",
+    "BIOS 1700 - Life Science for Non-Majors: a laboratory-lecture-based content course covering major topics in the life sciences; taught first as an in-person course then independently adapted to a virtual, partially synchronous implementation for 2020-21 fall/spring semesters",
+    "GEOG 1900 - Exploring Earth Science, the Atmosphere: A laboratory-based course covering basic earth science principles with an emphasis on the atmosphere; taught as a virtual, partially synchronous course"
+  ),
   "Biology Lecturer for Pre-Med Initiative", "2018", "Western Michigan University", "Kalamazoo, Michigan",
-    list("A student-led program for MCAT exam preparation at WMU"),
-  
+  list("A student-led program for MCAT exam preparation at WMU"),
   "Teacher", "2015-2017", "Friday Addition (FA) and Homeschool Ancillary Program (HsAP)", "Michigan",
-    list("Developed and taught 9th grade biology and 7th grade general science classes at FA and HsAP as well as 10th grade chemistry at HsAP"),
-  
+  list("Developed and taught 9th grade biology and 7th grade general science classes at FA and HsAP as well as 10th grade chemistry at HsAP"),
+
   # "College Tutor and Laboratory Assistant", "2012-2015",
   # "Cornerstone University","Grand Rapids, Michigan",
   # list("Tutored college undergraduates for courses in genetics, chemistry, physics, math, and history with 480 hours of experience",
   #      "Assisted in stockroom, ordering materials, organizing activities, and grading laboratory reports"),
-  
 ) %>%
   arrange(desc(when)) %>%
   detailed_entries(what, when, with, where, why)
@@ -249,21 +265,21 @@ tribble(
 # Grants and Awards
 ```{r}
 tribble(
-  ~ what, ~ detail, ~ when, ~ with,
+  ~what, ~detail, ~when, ~with,
   "Ronald Meyer Academic Scholar",
-    "Granted to a student who demonstrates the qualities necessary to become a successful scientist",
-    "2014", "Cornerstone University",
-  "Graduate Student Research Grant", 
-    "WMU grant secured for biology master thesis project", 
-    "2019", "Western Michigan University",
+  "Granted to a student who demonstrates the qualities necessary to become a successful scientist",
+  "2014", "Cornerstone University",
   "Graduate Student Research Grant",
-    "WMU grant Secured for science education research project", 
-    "2021", "Western Michigan University",
-  "Department Graduate Research and Creative Scholar", 
-    "Given in recognition of excellence in research and creative scholarship", 
-    "2023-2024", "Western Michigan University",
-  ) |> 
-  arrange(desc(when)) |> 
+  "WMU grant secured for biology master thesis project",
+  "2019", "Western Michigan University",
+  "Graduate Student Research Grant",
+  "WMU grant Secured for science education research project",
+  "2021", "Western Michigan University",
+  "Department Graduate Research and Creative Scholar",
+  "Given in recognition of excellence in research and creative scholarship",
+  "2023-2024", "Western Michigan University",
+) |>
+  arrange(desc(when)) |>
   brief_entries(glue::glue("\\textbf{<what>} \\newline <detail>", .open = "<", .close = ">"), when, with, .protect = FALSE)
 ```
 
