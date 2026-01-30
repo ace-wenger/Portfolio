@@ -18,70 +18,65 @@ output:
     keep_tex: true
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tibble)
+# encountered processing/compatibility issue with bibliography_entries()
+# renv::install("mitchelloharawild/vitae@6a70d7e")
+#renv::install("knitr@1.44")
+#unlink("CV_cache", recursive = TRUE)
 ```
 
 # Professional Profile
-I am a post-doctoral fellow with Science and Mathematics Program Improvement, a unit which is associated with the Mallinson Institute of Science Education at Western Michigan University. 
+I am a post-doctoral fellow with Science and Mathematics Program Improvement (SAMPI), a unit which is associated with the Mallinson Institute of Science Education at Western Michigan University. 
 I am also a recent graduate of the Mallinson Institute.
 
 ```{r}
 tribble(
-  ~ what, ~ dummy, ~ institution, ~ loc, ~ details,
+  ~what, ~dummy, ~institution, ~loc, ~details,
   ## Research Interests
-  "Research Interests", "",
+  "Research and Evaluation Interests", "",
   "", "",
   list(
     "1) Role and application of evidence in educational policy and practice",
     "2) Quasi-experimental study designs and their statistical analysis",
     "3) Computational reproducibility and leveraging open source tools/data"
-  ),
-  ## Teaching and Public Engagement Interests
-  "Teaching and Public Engagement Interests", "",
-  "", "",
-  list(
-    "1) Experimental design, causal inference, and the role of evidence in 
-    education policy and practice",
-    "2) Introductory and advanced biology subjects, particularly microbiology 
-    and molecular biology",
-    "3) History of educational psychology and science education",
-    "4) Statistical and computational research methods using R, esecially 
-    computational reproducibility"
   )
-
-) %>% detailed_entries(what, dummy, institution, loc, details)
+  ## Teaching and Public Engagement Interests
+  # "Teaching and Public Engagement Interests", "",
+  # "", "",
+  # list(
+  #   "1) Experimental design, causal inference, and the role of evidence in
+  #   education policy and practice",
+  #   "2) Introductory and advanced biology subjects, particularly microbiology
+  #   and molecular biology",
+  #   "3) History of educational psychology and science education",
+  #   "4) Statistical and computational research methods using R, esecially
+  #   computational reproducibility"
+  # )
+) |> detailed_entries(what, dummy, institution, loc, details)
 ```
 
 # Education
 
 ```{r}
 tribble(
-  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  ~degree, ~uni, ~loc, ~dates, ~details,
   ## PhD
   "Ph.D. in Science Eduation: Biological Sciences",
   "Western Michigan University",
   "Kalamazoo, Michigan", "2017-2024",
   list(
-    "Dissertation: Beyond Average Effects in Education Research: 
-    \\textit{Explaining heterogeneity of concept mapping research in science 
-    education through meta-regression modeling}. A three-paper dissertation 
-    composed of two independent systematic reviews and meta-analyses - third 
-    paper is a position paper arguing for the particular uses of meta-analytic 
-    methods exemplified by my work",
-    "Comittee chaired by Dr. William Cobern, with Dr. Betty Adams and 
-    Dr. Ya Zhang"
+    "Dissertation -- Beyond Average Effects in Education Research: \\textit{Explaining heterogeneity of concept mapping research in science education through meta-regression modeling}",
+    "Committee chaired by Dr. William Cobern, with Dr. Betty Adams and Dr. Ya Zhang"
   ),
   ## Masters
   "M.A. in Biological Sciences",
   "Western Michigan University",
   "Kalamazoo, Michigan", "2017-2021",
   list(
-    "Master's Thesis Project: Engineered Flagellin Disulfide Variants in 
-    Salmonella typhimurium. Advised by Dr. Brian Tripp",
+    "Master's Thesis Project -- Engineered Flagellin Disulfide Variants in Salmonella typhimurium. Advised by Dr. Brian Tripp",
     "Concurrently enrolled with Ph.D. Science Education program"
   ),
   ## Bachelors
@@ -89,153 +84,89 @@ tribble(
   "Cornerstone University",
   "Grand Rapids, Michigan", "2011-2015",
   list(
-    "Senior Thesis Project: a meta-study of the neural crest as a mechanism for vertebrate phenotypic diversity",
-    "Internship: Hesse Memorial Archaelogical Laboratory, learned and applied zooarcheological techniques with animal bone remains"
+    "Senior Thesis Project: Meta-study of the neural crest as a mechanism for vertebrate phenotypic diversity",
+    "Internship: Hesse Memorial Archaelogical Laboratory, learned and applied zooarcheological techniques with ancient animal bone remains"
   )
-) %>%
-  detailed_entries(degree, dates, uni, loc, details)
+) |> detailed_entries(degree, dates, uni, loc, details)
 ```
 
-\pagebreak
-
-# Research Experience and Certifications
-
-In addition to research experience obtained in the completion of undergraduate, masters, and doctoral degree programs, I have held (or continue to hold) the following notable certifications and research positions.
+# Academic Appointments
 
 ```{r}
 tribble(
-  ~ what, ~ when, ~ with, ~ where, ~why,
-  ## Graduate Research Assistant in SAMPI
-  "Graduate Research Assistant", "2021-2023",
-  "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
-  list(
-    "Assisted in program evaluation for clients including NSF-funded Professional development for Emerging Education Researchers (PEER) field school,  Kalamazoo Scholars Program, and the Michigan STEM Network (MiSTEM",
-    "Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)",
-    "Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data",
-    "Wrote internal and external reports summarizing findings"
-  ),
+  ~position, ~when, ~with, ~where, ~what,
   ## Post-doc
   "Post-Doctoral Fellow", "2025-",
   "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
   list(
-    "Conducted evaluation work for the MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher prprofessional development, and programs for students to advance STEM education in Michigan", 
-
-    "Created Qualtrics data collection instrument customized with extensive html
-    and javascript code",
-    "Designed and implemented a relational database to manage many thousands of
-    records, and develope data analysis pipelines to derive key program metrics",
-    "Collecting and managing various sources of data",
-    "Analyzing and making useful visualizations and other resources for data-driven decision-making"
-  ),
-  ## Certifications
-  "Certified Reviewer", "2025",
-  "What Works Clearinghouse (WWC)", "",
-  "Certified under v5.0 group design standards to conduct reviews of
-  experimental and quasi-experimental studies for the WWC",
-) %>%
-  arrange(desc(when)) %>%
-  detailed_entries(what, when, with, where, why)
+    "Contributed to the evaluation of several education programs both in K-12 and post-secondary education, principally:
+    \\begin{enumerate}
+    \\item[] The MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher professional development, and programs for students to advance STEM education in Michigan
+    \\item[] MiLEAP Grant, a Michigan Department of Education grant awarded to WMU for the improvement of systems for early detection and academic interventions for at-risk students -- included a retrospective evaluation of The Gardner Institute's \\textit{Gateways to Completion} program at WMU
+    \\end{enumerate}
+    See additional description of these projects under \\textsc{Research Experience}"
+  )
+) |> detailed_entries(position, when, with, where, what)
+# "Created Qualtrics data collection instrument customized with extensive html
+# and javascript code",
+# "Designed and implemented a relational database to manage many thousands of
+# records, and develope data analysis pipelines to derive key program metrics",
+# "Collecting and managing various sources of data",
+# "Analyzing and making useful visualizations and other resources for data-driven decision-making"
 ```
 
-<!-- \pagebreak -->
+# Publications
+```{r}
+bibliography_entries("articles.bib")
+```
 
-<!-- # Portfolio and Further Education -->
+## Manuscripts in Preparation
+```{r}
+bibliography_entries("manuscripts.bib")
+```
 
-<!-- ## Software for Statistics and Data Science -->
+<!-- ## Other Scholarly Writing
+<!-- 
+<!-- ### Software
+<!-- ### Data
+<!-- ### Registered Reports and Protocols
+<!-- ### Notable Blog Posts -->
 
-<!-- ```{r} -->
-<!-- tribble( -->
-<!--   ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2, -->
-<!--   "R", "substantial programming experience with base R, the Rstudio IDE, and common packages such as 'ggplot'", "See \\href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\\textit{ConceptMapping-inBioEd}}", "", "",  -->
-<!--   "Git and GitHub", "substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform", "See my GitHub account for several public projects", "", "", -->
-<!--   "Analysis Pipeline Tools", "substantial experience implementing data analysis pipelines with the `targets` and `renv` R packages", "See \\href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\\textit{ConceptMapping-inBioEd}}", "", "", -->
-<!--   "SPSS and SAS", "minor programming experience with both", "See \\href{https://github.com/ace-wenger/Portfolio/sas}{\\textit{Portfolio/sas}}", "", "",  -->
-<!--   "Excel VBA","minor programming experience", "See \\href{https://github.com/ace-wenger/Portfolio/vba}{\\textit{Portfolio/vba}}", "", "" -->
-<!-- ) %>%  -->
-<!--   brief_entries(glue::glue("\\textbf{<what>}: <detail> (<portfolio_link>)", .open = "<", .close = ">"), .protect = FALSE) -->
-<!-- ``` -->
+# Presentations
+```{r}
+bibliography_entries("presentations.bib")
+```
 
-<!-- ## Software for Documentation and Reporting -->
-
-<!-- ```{r} -->
-<!-- tribble( -->
-<!--   ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2, -->
-<!--   "Microsoft Office Suite", "extensive experience with Word, PowerPoint, Excel, Outlook, and Teams", "", "", "", -->
-<!--   "Quarto", "substantial experience creating reports and presentations", "", "", "", -->
-<!--   "Rmarkdown", "substantial experience creating data analysis notebooks, reports, and other documents such as this CV", "", "", "", -->
-<!--   "LaTeX", "minor working experience using the TeXworks IDE such as in this CV", "", "", "", -->
-<!-- ) %>%  -->
-<!--   brief_entries(glue::glue("\\textbf{<what>}: <detail> (<portfolio_link>)", .open = "<", .close = ">"), .protect = FALSE) -->
-<!-- ``` -->
-
-<!-- ## Other Software -->
-
-<!-- ```{r} -->
-<!-- tribble( -->
-<!--   ~ what, ~ detail, ~ portfolio_link, ~ dummy1, ~ dummy2, -->
-<!--   "Qualtrics", "substantial experience in creating survey forms, distributing to program participants, and processing results", "", "", "", -->
-<!--   "Google Forms", "substantial experience in creating survey forms and processing results", "", "", "", -->
-<!--   "Abstrackr and MetaReviewer", "substantial experience in these platforms for meta-research studies", "", "", "" -->
-<!-- ) %>%  -->
-<!--   brief_entries(glue::glue("\\textbf{<what>}: <detail> <portfolio_link>", .open = "<", .close = ">"), .protect = FALSE) -->
-<!-- ``` -->
-
-<!-- ## Workshops and Online Courses -->
-
-<!-- ```{r} -->
-<!-- tribble( -->
-<!--   ~ what, ~ detail, ~ semester, ~ dummy1, ~ dummy2, -->
-<!--   "Introduction to Systematic Reivew and Meta-Analysis", "a John Hopkins University course hosted by Coursera",  -->
-<!--   "2020", "", "", -->
-
-<!--   "AERA-ICPSR PEERS", "attended several in this workshop series including: Modern Meta-analysis, Cutting-edge Quatitative and Computational Methods for STEM Education, and Introduction to qualitative meta-synthesis methods", -->
-<!--   "2020-21", "", "", -->
-
-<!--   "Bibliometrics Training Series", "put on by the NIH Library",  -->
-<!--   "2021", "", "", -->
-
-<!--   # "Getting Started with SAS Programming", "a SAS course hosted by Coursera", -->
-<!--   # "2021", "", "", -->
-
-<!--   "Excel VBA Programming", "video course introducing VBA programming and various applications such as macro implementation, userforms, and webscraping", -->
-<!--   "2022", "", "", -->
-
-<!--   # "Hands-on Programming in R", "online book course by Hadley Wickham of Posit", -->
-<!--   # "2022", "", "", -->
-
-<!--   # "Happy Git and GitHub for the userR", "online book course introducing basic and more advanced applications of GitHub version control", -->
-<!--   # "2022", "", "", -->
-
-<!--   # "Data Science in R", "online book course by Hadley Wickham of Posit", -->
-<!--   # "2022", "", "", -->
-
-<!--   "Research Transparency Online Course", "put on by the Berkeley Initiative for Transparency in the Social Sciences (BITSS)", -->
-<!--   "2022", "", "", -->
-
-<!--   "Reproducible Research Tutorial Series", "online course by Dr. Schloss of the University of Michigan, supported by NIH", -->
-<!--   "2022", "", "", -->
-
-<!--   "Instats: Path analysis with interactions and indirect effects in R", "Taught by Michael Zyphur", -->
-<!--   "2022", "", "", -->
-
-<!--   # "The Turing Way", "online community-sourced course supported by the Alan Turing Institute", -->
-<!--   # "2023", "", "", -->
-
-<!--   "Instats: Confirmatory factor analysis and structural equation modeling in R", "Taught by Michael Zyphur and with certificate of completion", -->
-<!--   "2023", "", "", -->
-
-<!--   "Instats: Meta-analytic structural equation modeling", "Taught by Mike Cheung and with certificate of completion", -->
-<!--   "2023", "", "", -->
-
-<!--   "Evidence Synthesis and Meta-Analysis in R (ESMAR) Conference", "several workshops including: Advanced GitHub, Screening studies for eligibility in evidence syntheses", -->
-<!--   "2023", "", "" -->
-<!-- ) %>%  -->
-<!--   arrange(desc(semester)) %>% -->
-<!--   brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), semester, .protect = FALSE) -->
-<!-- ``` -->
+# Grants and Awards
+```{r}
+tribble(
+  ~what, ~detail, ~when, ~with,
+  # "Ronald Meyer Academic Scholar",
+  # "Granted to a student who demonstrates the qualities necessary to become a
+  # successful scientist",
+  # "2014", "Cornerstone University",
+  "Graduate Student Research Grant",
+  "WMU grant secured for biology master thesis project",
+  "2019", "Western Michigan University",
+  "Graduate Student Research Grant",
+  "WMU grant Secured for science education research project",
+  "2021", "Western Michigan University",
+  "Department Graduate Research and Creative Scholar",
+  "Given in recognition of excellence in research and creative scholarship",
+  "2023-2024", "Western Michigan University",
+) |>
+  arrange(desc(when)) |>
+  brief_entries(
+    glue::glue(
+      "\\textbf{<what>} \\newline <detail>",
+      .open = "<", .close = ">"
+    ),
+    when, with,
+    .protect = FALSE
+  )
+```
 
 # Teaching and Service
-
 ```{r}
 tribble(
   ~what, ~when, ~with, ~where, ~why,
@@ -257,41 +188,148 @@ tribble(
   # "Cornerstone University","Grand Rapids, Michigan",
   # list("Tutored college undergraduates for courses in genetics, chemistry, physics, math, and history with 480 hours of experience",
   #      "Assisted in stockroom, ordering materials, organizing activities, and grading laboratory reports"),
-) %>%
-  arrange(desc(when)) %>%
+) |>
+  arrange(desc(when)) |>
   detailed_entries(what, when, with, where, why)
 ```
 
-# Grants and Awards
+<!-- mentoring -->
+
+# Research Experience and Certifications
+
+In addition to research experience obtained in the completion of degree programs and in academic positions, I have held (or continue to hold) the following notable certifications and research positions.
+
 ```{r}
 tribble(
-  ~what, ~detail, ~when, ~with,
-  "Ronald Meyer Academic Scholar",
-  "Granted to a student who demonstrates the qualities necessary to become a successful scientist",
-  "2014", "Cornerstone University",
-  "Graduate Student Research Grant",
-  "WMU grant secured for biology master thesis project",
-  "2019", "Western Michigan University",
-  "Graduate Student Research Grant",
-  "WMU grant Secured for science education research project",
-  "2021", "Western Michigan University",
-  "Department Graduate Research and Creative Scholar",
-  "Given in recognition of excellence in research and creative scholarship",
-  "2023-2024", "Western Michigan University",
+  ~what, ~when, ~with, ~where, ~why,
+  ## Graduate Research Assistant in SAMPI
+  "Graduate Research Assistant", "2021-2023",
+  "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
+  list(
+    "Assisted in program evaluation for clients including: NSF-funded Professional development for Emerging Education Researchers (PEER) field school; Kalamazoo Scholars Program; and The MiSTEM Network",
+    "\\begin{enumerate}Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)",
+    "Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data",
+    "Wrote internal and external reports summarizing findings\\end{enumerate}"
+  ),
+  ## Certifications
+  "Certified Reviewer", "2025",
+  "What Works Clearinghouse (WWC)", "",
+  "Certified under v5.0 group design standards to conduct reviews of
+  experimental and quasi-experimental studies for the WWC",
 ) |>
   arrange(desc(when)) |>
-  brief_entries(glue::glue("\\textbf{<what>} \\newline <detail>", .open = "<", .close = ">"), when, with, .protect = FALSE)
+  detailed_entries(what, when, with, where, why)
 ```
 
-\pagebreak
+# Professional Development and Skills
 
-# Publications
+I value the continous development of my skills and areas of expertise.
+The following describes these skills especially with regards to my proficiency with programming languagues, software for statistical analysis, and tools for open and accessible scientific reports.
+
+## Software for Statistics and Data Science
+
 ```{r}
-bibliography_entries("Publications.bib")
+tribble(
+  ~what, ~detail, ~portfolio_link, ~dummy1, ~dummy2,
+  "R",
+  "extensive programming experience with base R and many packages",
+  "See \\href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\\textit{ConceptMapping-inBioEd}}",
+  "", "",
+  "Git and GitHub",
+  "substantial experience creating and mangaging projects using Git version control and the GitHub collaboration platform",
+  "See my GitHub account for several public projects",
+  "", "",
+  "Analysis Pipeline Tools", "substantial experience implementing data analysis pipelines with the `targets` and `renv` R packages", "See \\href{https://github.com/ace-wenger/ConceptMapping_inBioEd}{\\textit{ConceptMapping-inBioEd}}", "", "",
+  "SPSS and SAS", "minor programming experience with both", "See \\href{https://github.com/ace-wenger/Portfolio/sas}{\\textit{Portfolio/sas}}", "", "",
+  "Excel VBA", "minor programming experience", "See \\href{https://github.com/ace-wenger/Portfolio/vba}{\\textit{Portfolio/vba}}", "", ""
+) |>
+  brief_entries(
+    glue::glue(
+      "\\textbf{<what>}: <detail> (<portfolio_link>)",
+      .open = "<", .close = ">"
+    ),
+    .protect = FALSE
+  )
 ```
 
-# Presentations
+## Software for Documentation and Reporting
+
 ```{r}
-bibliography_entries("Presentations.bib")
+tribble(
+  ~what, ~detail, ~portfolio_link, ~dummy1, ~dummy2,
+  "Microsoft Office Suite",
+  "extensive collaborative experience, including use of advanced Word features, formulas and VBA macro programs in Excel",
+  "", "", "",
+  "Google Workspaces",
+  "extensive collaborative experience, including use of the API in Drive, Docs, and sheets to integrate R scripts",
+  "", "", "",
+  "Quarto and Rmarkdown",
+  "substantial experience creating reports and presentations that integrate R scripts and render to MS Word, PDF, HTML webpages and dashboards, entire websites, and Google Docs",
+  "", "", "",
+  "LaTeX",
+  "minor experience working with Tex files such as in editing this CV",
+  "", "", "",
+) %>%
+  brief_entries(glue::glue("\\textbf{<what>}: <detail> (<portfolio_link>)", .open = "<", .close = ">"), .protect = FALSE)
 ```
+
+## Other Software
+
+```{r}
+tribble(
+  ~what, ~detail, ~portfolio_link, ~dummy1, ~dummy2,
+  "Qualtrics", "substantial experience in creating survey forms, customizing those forms with javascript and html, distributing to program participants, and processing results", "", "", "",
+  "Google Forms", "substantial experience in creating survey forms and processing results", "", "", "",
+  "Abstrackr and MetaReviewer", "substantial experience in these platforms for meta-research studies", "", "", ""
+) %>%
+  brief_entries(glue::glue("\\textbf{<what>}: <detail> <portfolio_link>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
+## Workshops and Online Courses
+
+```{r}
+tribble(
+  ~what, ~detail, ~semester, ~dummy1, ~dummy2,
+  "Introduction to Systematic Reivew and Meta-Analysis", "a John Hopkins University course hosted by Coursera",
+  "2020", "", "",
+  "AERA-ICPSR PEERS", "attended several in this workshop series including: Modern Meta-analysis, Cutting-edge Quatitative and Computational Methods for STEM Education, and Introduction to qualitative meta-synthesis methods",
+  "2020-21", "", "",
+  "Bibliometrics Training Series", "put on by the NIH Library",
+  "2021", "", "",
+
+  # "Getting Started with SAS Programming", "a SAS course hosted by Coursera", -->
+  # "2021", "", "", -->
+
+  # "Hands-on Programming in R", "online book course by Hadley Wickham of Posit", -->
+  # "2022", "", "", -->
+
+  # "Happy Git and GitHub for the userR", "online book course introducing basic and more advanced applications of GitHub version control", -->
+  # "2022", "", "", -->
+
+  # "Data Science in R", "online book course by Hadley Wickham of Posit", -->
+  # "2022", "", "", -->
+
+  "Research Transparency Online Course", "put on by the Berkeley Initiative for Transparency in the Social Sciences (BITSS)",
+  "2022", "", "",
+  "Reproducible Research Tutorial Series", "online course by Dr. Schloss of the University of Michigan, supported by NIH",
+  "2022", "", "",
+  "Instats: Path analysis with interactions and indirect effects in R", "Taught by Michael Zyphur",
+  "2022", "", "",
+
+  # "The Turing Way", "online community-sourced course supported by the Alan Turing Institute", -->
+  # "2023", "", "", -->
+
+  "Instats: Confirmatory factor analysis and structural equation modeling in R", "Taught by Michael Zyphur and with certificate of completion",
+  "2023", "", "",
+  "Instats: Meta-analytic structural equation modeling", "Taught by Mike Cheung and with certificate of completion",
+  "2023", "", "",
+  "Evidence Synthesis and Meta-Analysis in R (ESMAR) Conference", "several workshops including: Advanced GitHub, Screening studies for eligibility in evidence syntheses",
+  "2023", "", ""
+) |>
+  arrange(desc(semester)) %>%
+  brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), semester, .protect = FALSE)
+```
+
+
+
 
