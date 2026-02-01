@@ -6,7 +6,7 @@ qualifications: B.S., MA
 # position: "Ph.D. Science Education"
 address: "Kalamazoo, Michigan"
 email: "aaron.wenger@protonmail.com"
-#website:
+www: www.aaroncwenger.com
 github: ace-wenger
 linkedin: aaron-wenger-a6b7b724a
 orcid: 000-0002-1972-3001
@@ -24,12 +24,11 @@ library(vitae)
 library(tibble)
 # encountered processing/compatibility issue with bibliography_entries()
 # renv::install("mitchelloharawild/vitae@6a70d7e")
-#renv::install("knitr@1.44")
-#unlink("CV_cache", recursive = TRUE)
 ```
 
 # Professional Profile
-I am a post-doctoral fellow with Science and Mathematics Program Improvement (SAMPI), a unit which is associated with the Mallinson Institute of Science Education at Western Michigan University. 
+I am a post-doctoral fellow with Science and Mathematics Program Improvement (SAMPI), unit which is associated with the Mallinson Institute of Science Education at Western Michigan University (WMU). 
+We conduct evaluation work for WMU and for many external partners including NSF grantees and the Michigan Department of Education.
 I am also a recent graduate of the Mallinson Institute.
 
 ```{r}
@@ -42,19 +41,16 @@ tribble(
     "1) Role and application of evidence in educational policy and practice",
     "2) Quasi-experimental study designs and their statistical analysis",
     "3) Computational reproducibility and leveraging open source tools/data"
+  ),
+  # Teaching and Public Engagement Interests
+  "Teaching and Public Engagement Interests", "",
+  "", "",
+  list(
+    "1) Education research and the role of evidence in education policy/practice",
+    "2) History of educational psychology and implications for teaching practices",
+    "3) Introductory and advanced biology subjects",
+    "4) Statistical and computational research methods using R"
   )
-  ## Teaching and Public Engagement Interests
-  # "Teaching and Public Engagement Interests", "",
-  # "", "",
-  # list(
-  #   "1) Experimental design, causal inference, and the role of evidence in
-  #   education policy and practice",
-  #   "2) Introductory and advanced biology subjects, particularly microbiology
-  #   and molecular biology",
-  #   "3) History of educational psychology and science education",
-  #   "4) Statistical and computational research methods using R, esecially
-  #   computational reproducibility"
-  # )
 ) |> detailed_entries(what, dummy, institution, loc, details)
 ```
 
@@ -94,19 +90,30 @@ tribble(
 
 ```{r}
 tribble(
-  ~position, ~when, ~with, ~where, ~what,
-  ## Post-doc
-  "Post-Doctoral Fellow", "2025-",
-  "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
-  list(
-    "Contributed to the evaluation of several education programs both in K-12 and post-secondary education, principally:
-    \\begin{enumerate}
-    \\item[] The MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher professional development, and programs for students to advance STEM education in Michigan
-    \\item[] MiLEAP Grant, a Michigan Department of Education grant awarded to WMU for the improvement of systems for early detection and academic interventions for at-risk students -- included a retrospective evaluation of The Gardner Institute's \\textit{Gateways to Completion} program at WMU
-    \\end{enumerate}
-    See additional description of these projects under \\textsc{Research Experience}"
-  )
-) |> detailed_entries(position, when, with, where, what)
+  ~position, ~when, ~with, ~where, ~details,
+  "Post-Doctoral Fellow", "2025-present",
+  "Science And Mathematics Program Improvement (SAMPI)", "Kalamazoo, Michigan",
+  "\\begin{cvitems}
+     \\item Contributed to the evaluation of several education programs both in K-12 and post-secondary education, principally:
+     \\item The MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher professional development, and programs for students to advance STEM education in Michigan
+     \\item MiLEAP Grant, a Michigan Department of Education grant awarded to WMU for the improvement of systems for early detection and academic interventions for at-risk students -- included a retrospective evaluation of The Gardner Institute's \\textit{Gateways to Completion} program at WMU
+     \\item See additional description of these projects under \\textsc{Research Experience}
+   \\end{cvitems}"
+) |> detailed_entries(position, when, with, where, details)
+# tribble(
+#  ~position, ~when, ~with, ~where, ~what,
+#  ## Post-doc
+#  "Post-Doctoral Fellow", "2025-present",
+#  "Science And Mathematics Program Improvement (SAMPI)", "Kalamazoo, Michigan",
+#  list(
+#    "statement 1",
+#    "statement 2"
+#    # "Contributed to the evaluation of several education programs both in K-12 and post-secondary education, principally:",
+#    # "The MiSTEM Network, a Michigan Department of Education program for the development of public-private partnerships, teacher professional development, and programs for students to advance STEM education in Michigan",
+#    # "MiLEAP Grant, a Michigan Department of Education grant awarded to WMU for the improvement of systems for early detection and academic interventions for at-risk students -- included a retrospective evaluation of The Gardner Institute's \\textit{Gateways to Completion} program at WMU",
+#    # "See additional description of these projects under \\textsc{Research Experience}"
+#  )
+# ) |> detailed_entries(position, when, with, where, what)
 # "Created Qualtrics data collection instrument customized with extensive html
 # and javascript code",
 # "Designed and implemented a relational database to manage many thousands of
@@ -207,9 +214,9 @@ tribble(
   "Science And Mathematics Program Improvement", "Kalamazoo, Michigan",
   list(
     "Assisted in program evaluation for clients including: NSF-funded Professional development for Emerging Education Researchers (PEER) field school; Kalamazoo Scholars Program; and The MiSTEM Network",
-    "\\begin{enumerate}Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)",
+    "Created protocols and evaluation tools (e.g., Qualtric surveys and interview questions)",
     "Conducted quantitative and qualitative analysis of numerical, ordinal, and textual data",
-    "Wrote internal and external reports summarizing findings\\end{enumerate}"
+    "Wrote internal and external reports summarizing findings"
   ),
   ## Certifications
   "Certified Reviewer", "2025",
@@ -290,43 +297,55 @@ tribble(
 ```{r}
 tribble(
   ~what, ~detail, ~semester, ~dummy1, ~dummy2,
-  "Introduction to Systematic Reivew and Meta-Analysis", "a John Hopkins University course hosted by Coursera",
+  "Introduction to Systematic Reivew and Meta-Analysis",
+  "a John Hopkins University course hosted by Coursera",
   "2020", "", "",
-  "AERA-ICPSR PEERS", "attended several in this workshop series including: Modern Meta-analysis, Cutting-edge Quatitative and Computational Methods for STEM Education, and Introduction to qualitative meta-synthesis methods",
+  "AERA-ICPSR PEERS",
+  "several in this workshop series including: Modern Meta-analysis, Cutting-edge Quatitative and Computational Methods for STEM Education, and Introduction to qualitative meta-synthesis methods",
   "2020-21", "", "",
-  "Bibliometrics Training Series", "put on by the NIH Library",
+  "Bibliometrics Training Series",
+  "put on by the NIH Library",
   "2021", "", "",
-
-  # "Getting Started with SAS Programming", "a SAS course hosted by Coursera", -->
-  # "2021", "", "", -->
-
-  # "Hands-on Programming in R", "online book course by Hadley Wickham of Posit", -->
-  # "2022", "", "", -->
-
-  # "Happy Git and GitHub for the userR", "online book course introducing basic and more advanced applications of GitHub version control", -->
-  # "2022", "", "", -->
-
-  # "Data Science in R", "online book course by Hadley Wickham of Posit", -->
-  # "2022", "", "", -->
-
-  "Research Transparency Online Course", "put on by the Berkeley Initiative for Transparency in the Social Sciences (BITSS)",
+  "Research Transparency Online Course",
+  "put on by the Berkeley Initiative for Transparency in the Social Sciences (BITSS)",
   "2022", "", "",
-  "Reproducible Research Tutorial Series", "online course by Dr. Schloss of the University of Michigan, supported by NIH",
+  "Reproducible Research Tutorial Series",
+  "online course by Dr. Schloss of the University of Michigan, supported by NIH",
   "2022", "", "",
-  "Instats: Path analysis with interactions and indirect effects in R", "Taught by Michael Zyphur",
+  "Instats - Path analysis with interactions and indirect effects in R",
+  "Taught by Michael Zyphur",
   "2022", "", "",
-
-  # "The Turing Way", "online community-sourced course supported by the Alan Turing Institute", -->
-  # "2023", "", "", -->
-
-  "Instats: Confirmatory factor analysis and structural equation modeling in R", "Taught by Michael Zyphur and with certificate of completion",
+  "Instats - Confirmatory Factor Analysis and Structural Equation Modeling in R",
+  "Taught by Michael Zyphur and with certificate of completion",
   "2023", "", "",
-  "Instats: Meta-analytic structural equation modeling", "Taught by Mike Cheung and with certificate of completion",
+  "Instats - Meta-analytic Structural Equation Modeling in R",
+  "Taught by Mike Cheung and with certificate of completion",
   "2023", "", "",
-  "Evidence Synthesis and Meta-Analysis in R (ESMAR) Conference", "several workshops including: Advanced GitHub, Screening studies for eligibility in evidence syntheses",
-  "2023", "", ""
+
+  # "Evidence Synthesis and Meta-Analysis in R (ESMAR) Conference",
+  # "several workshops including: Advanced GitHub, Screening studies for eligibility in evidence syntheses",
+  # "2023", "", "",
+
+  "Boot.dev - Learn to Code in Python",
+  "basic principles of coding in python3",
+  "2025", "", "",
+  "Boot.dev - Learn Git",
+  "version control fundamentals, repository management, git internals, branching, merging, rebasing, remote repositories, and remote collaboration",
+  "2025", "", "",
+  "Boot.dev - Learn Linux",
+  "Linux command line, shell scripting basics, file system management, user permissions and security, I/O redirection and piping, process management, package management, and terminal environments",
+  "2025", "", "",
+  "Boot.dev - Learn Object-oriented Programming",
+  "clean code principles, classes, encapsulation, abstraction, inheritance, and polymorphism",
+  "2025", "", "",
+  "Boot.dev - Learn Functional Programming",
+  "",
+  "2026", "", "",
+  "Boot.dev - Learn SQL",
+  "relational database design, crud operations, SQL queries, joins, subqueries, aggregations, data normalization, and performance and indexing",
+  "2025", "", "",
 ) |>
-  arrange(desc(semester)) %>%
+  arrange(desc(semester), what) %>%
   brief_entries(glue::glue("\\textbf{<what>}: <detail>", .open = "<", .close = ">"), semester, .protect = FALSE)
 ```
 
